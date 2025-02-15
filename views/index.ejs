@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <h1>Welcome to Your Telegram Mini App!</h1>
+  <p>This is a simple web app running inside Telegram.</p>
+  <button id="send-data">Send Data to Telegram</button>
+</body>
+</html>
+<script>
+    // Initialize the Telegram Web App
+    const tg = window.Telegram.WebApp;
+    // alert(tg);
+  
+    // Expand the app to full screen
+    tg.expand();
+  
+    // Access user data
+    const user = tg.initDataUnsafe.user;
+    console.log('User:', user);
+  
+    // Example: Send data back to Telegram
+    document.getElementById('send-data').addEventListener('click', () => {
+      tg.sendData('Hello from the Mini App!');
+    });
+  </script>
