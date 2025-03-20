@@ -11,20 +11,4 @@
   <button id="send-data">Send Data to Telegram</button>
 </body>
 </html>
-<script>
-    // Initialize the Telegram Web App
-    const tg = window.Telegram.WebApp;
-    // alert(tg);
-  
-    // Expand the app to full screen
-    tg.expand();
-  
-    // Access user data
-    const user = tg.initDataUnsafe.user;
-    console.log('User:', user);
-  
-    // Example: Send data back to Telegram
-    document.getElementById('send-data').addEventListener('click', () => {
-      tg.sendData('Hello from the Mini App!');
-    });
-  </script>
+
